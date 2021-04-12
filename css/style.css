@@ -1549,6 +1549,7 @@ html .ui-button.ui-state-disabled:hover {
 
 .online__content {
   max-width: 500px;
+  min-height: 300px;
 }
 
 .online__content-title {
