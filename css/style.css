@@ -440,6 +440,10 @@ li {
   margin: 0 auto;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -642,9 +646,12 @@ input.error {
 }
 
 label.error {
+  white-space: nowrap;
+  overflow: hidden;
   position: absolute;
   bottom: -12px;
   left: 0;
+  right: 0;
   font-size: 12px;
   line-height: 12px;
   color: #EB5757;

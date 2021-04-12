@@ -640,51 +640,6 @@ $('#step_1').validate({
             required: true,
         }
     },
-    messages: {
-        fullName: {
-            required: "Пожалуйста заполните поле",
-            minlength: "В имени миниму 2 символа"
-        },
-        // phone: {
-        //     required: "Пожалуйста заполните поле"
-        // },
-        // status: {
-        //     required: ""
-        // },
-        // dateBornDay: {
-        //     required: ""
-        // },
-        // dateBornMounth: {
-        //     required: ""
-        // },
-        // dateBornYear: {
-        //     required: ""
-        // },
-        // series: {
-        //     required: ""
-        // },
-        // passportNum: {
-        //     required: ""
-        // },
-        // issued: {
-        //     required: ""
-        // },
-        // inn: {
-        //     required: ""
-        // },
-        // inn: {
-        //     required: ""
-        // },
-        // "date-day": {
-        //     required: ""
-        // },
-        // "date-month": {
-        //     required: ""
-        // },
-        // "date-year": {
-        //     required: ""
-        // },
-    },
 });
 
 // steps2-5
@@ -933,3 +888,83 @@ $(function () {
         $.magnificPopup.close();
     });
 });
+
+
+// get date
+
+const form = document.querySelector('#step_1');
+const form2 = document.querySelector('#step_1-5');
+const formInput = document.querySelectorAll('input')
+const formSelect = document.querySelectorAll('select')
+if (form || form2) {
+    const temporarily = {
+        objInputs: [],
+
+        addValue(name) {
+            formInput.forEach((el) => {
+                el.addEventListener('change', (e) => {
+                    let inputName = e.target.name
+                    let inputValue = e.target.value
+                    let date = new Date();
+                    const thisInput = this.objInputs.find(item => item.name == inputName);
+                    if (thisInput) {
+                        thisInput.value = inputValue;
+                        thisInput.date = date;
+                    } else {
+                        this.objInputs.push({
+                            name: inputName,
+                            value: inputValue,
+                            date: date,
+                        })
+                    }
+                    console.log(this.objInputs);
+                })
+            })
+            formSelect.forEach((el) => {
+                el.addEventListener('change', (e) => {
+                    let inputName = e.target.name
+                    let inputValue = e.target.value
+                    let date = new Date();
+                    const thisInput = this.objInputs.find(item => item.name == inputName);
+                    if (thisInput) {
+                        thisInput.value = inputValue;
+                        thisInput.date = date;
+                    } else {
+                        this.objInputs.push({
+                            name: inputName,
+                            value: inputValue,
+                            date: date,
+                        })
+                    }
+                    console.log(this.objInputs);
+                })
+            })
+        }
+    }
+
+    temporarily.addValue();
+
+
+    // const postData = dataUser => fetch('server', {
+    //     method: 'POST',
+    //     body: dataUser,
+    // })
+
+    // form.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     const formData = new FormData(form)
+    //     formData.append('cart', JSON.stringify(temporarily.objInputs))
+
+    //     postData(formData)
+    //         .then((response) => {
+    //             if (!response.ok) {
+    //                 throw new Error(response.status)
+    //             } else {
+    //                 alert('Форма отправлена')
+    //                 console.log(JSON.stringify(temporarily.objInputs))
+    //                 console.log(response.statusText);
+    //             }
+    //         })
+    // })
+}
+
