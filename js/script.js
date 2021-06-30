@@ -36,6 +36,9 @@ $(document).ready(function () {
     $('.instruction-content__text--scroll').mCustomScrollbar({
         axis: "y",
     });
+    $('.table-scroll').mCustomScrollbar({
+        axis: "y",
+    });
     // scrollbar end
     // slick silder
 
