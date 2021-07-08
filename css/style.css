@@ -1243,6 +1243,37 @@ select:focus {
   color: #FFAA32;
 }
 
+.calc__footer {
+  margin-top: 15px;
+  padding: 0 59px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calc__footer-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #b2b2b2;
+  text-decoration: underline;
+}
+
+.calc__footer-item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.calc__footer-item:hover {
+  color: #FFAA32;
+}
+
+.calc__footer-item img {
+  display: block;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
 .wrap__content {
   padding: 0 59px;
 }
@@ -1252,6 +1283,10 @@ select:focus {
 }
 
 .wrap__content--product2 {
+  display: none;
+}
+
+.wrap__content--product3 {
   display: none;
 }
 
@@ -5749,6 +5784,10 @@ html .ui-button.ui-state-disabled:hover {
   .credits__calc {
     max-width: 100%;
     padding: 0;
+  }
+
+  .calc__footer {
+    padding: 0 25px;
   }
 
   .wrap__content {

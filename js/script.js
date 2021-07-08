@@ -143,14 +143,14 @@ if (calc) {
             if ($(this).is('#product1')) {
                 $('.wrap__content--product1').show(200);
                 $('.wrap__content--product2').hide(200);
-            } else {
+            } else if ($(this).is('#product2')) {
                 $('.wrap__content--product1').hide(200);
                 $('.wrap__content--product2').show(200);
             }
 
             if ($('#product1').is('.current')) {
                 prod = 1;
-            } else {
+            } else if ($('#product2').is('.current')) {
                 prod = 2
             }
             return prod = prod;
