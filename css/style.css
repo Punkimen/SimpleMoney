@@ -528,7 +528,7 @@ h3.section-title {
   margin-bottom: 50px;
 }
 
-.mCSB_inside > .mCSB_container {
+.mCSB_inside>.mCSB_container {
   margin-right: 0;
   position: relative;
   padding-left: 20px;
@@ -663,7 +663,7 @@ label.error {
   display: inline-block;
 }
 
-.control:hover input ~ .control_indicator {
+.control:hover input~.control_indicator {
   border-color: #FFAA32;
 }
 
@@ -678,15 +678,15 @@ label.error {
   opacity: 0;
 }
 
-.control input:checked ~ .control_indicator {
+.control input:checked~.control_indicator {
   border-color: #FFAA32;
 }
 
-.control input:checked ~ .control_indicator:after {
+.control input:checked~.control_indicator:after {
   display: block;
 }
 
-.control input.error ~ .control_indicator {
+.control input.error~.control_indicator {
   border-color: #EB5757;
 }
 
@@ -740,8 +740,8 @@ label.error {
   position: relative;
 }
 
-.select select:hover ~ .select_arrow,
-.select select:focus ~ .select_arrow {
+.select select:hover~.select_arrow,
+.select select:focus~.select_arrow {
   border-color: var(--selectArrow-color);
 }
 
@@ -1140,7 +1140,7 @@ select:focus {
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
   padding: 120px 0 100px;
-  height: 720px;
+  height: 740px;
 }
 
 .info__slider-title {
@@ -1311,7 +1311,7 @@ select:focus {
   position: relative;
 }
 
-.сalc__info + .сalc__info {
+.сalc__info+.сalc__info {
   margin-top: 25px;
 }
 
@@ -1372,7 +1372,7 @@ select:focus {
   background: #e8e6e6;
 }
 
-.range > .ui-corner-all {
+.range>.ui-corner-all {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
   border: none;
@@ -1450,7 +1450,7 @@ html .ui-button.ui-state-disabled:hover {
   align-items: center;
 }
 
-.calculation__content + .calculation__content {
+.calculation__content+.calculation__content {
   margin-top: 15px;
 }
 
@@ -1513,7 +1513,7 @@ html .ui-button.ui-state-disabled:hover {
   cursor: pointer;
 }
 
-.info__slider .slick-dots li + li {
+.info__slider .slick-dots li+li {
   margin-left: 30px;
 }
 
@@ -1612,7 +1612,7 @@ html .ui-button.ui-state-disabled:hover {
   display: block;
 }
 
-.online__content-text span + span {
+.online__content-text span+span {
   margin-top: 15px;
 }
 
@@ -1743,7 +1743,7 @@ html .ui-button.ui-state-disabled:hover {
   padding: 35px 35px 50px;
 }
 
-.how__item + .how__item {
+.how__item+.how__item {
   margin-left: 10px;
 }
 
@@ -1883,7 +1883,7 @@ html .ui-button.ui-state-disabled:hover {
   cursor: pointer;
 }
 
-.repay__item + .repay__item {
+.repay__item+.repay__item {
   margin-left: 10px;
 }
 
@@ -1894,13 +1894,16 @@ html .ui-button.ui-state-disabled:hover {
 
 .repay__item-wrapper {
   display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  height: 100%;
 }
 
 .repay__item-content {
   max-width: 255px;
   margin-right: auto;
+  flex-grow: 1;
 }
 
 .repay__item-title {
@@ -1915,7 +1918,10 @@ html .ui-button.ui-state-disabled:hover {
 
 .repay__item:first-child .repay__item-images {
   margin-top: 20px;
-  cursor: pointer;
+}
+
+.repay__item-images_bank {
+  padding-bottom: 20px;
 }
 
 .repay__item-images img {
@@ -1974,7 +1980,7 @@ html .ui-button.ui-state-disabled:hover {
   display: block;
 }
 
-.accordion__item + .accordion__item {
+.accordion__item+.accordion__item {
   margin-top: 5px;
 }
 
@@ -4085,7 +4091,7 @@ html .ui-button.ui-state-disabled:hover {
   margin-left: 30px;
 }
 
-.photo__wrapper-right li + li {
+.photo__wrapper-right li+li {
   margin-top: 10px;
 }
 
@@ -4673,7 +4679,7 @@ html .ui-button.ui-state-disabled:hover {
   margin-left: 30px;
 }
 
-.social__icon + .social__icon {
+.social__icon+.social__icon {
   margin-left: 5px;
 }
 
@@ -4696,7 +4702,7 @@ html .ui-button.ui-state-disabled:hover {
   font-size: 16px;
 }
 
-.footer__left-links li + li {
+.footer__left-links li+li {
   margin-top: 10px;
 }
 
@@ -4970,11 +4976,20 @@ html .ui-button.ui-state-disabled:hover {
     display: block;
   }
 
+  .repay__item-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .repay__item-images_bank {
+    padding-top: 20px;
+  }
+
   .repay__item {
     max-width: 100%;
   }
 
-  .repay__item + .repay__item {
+  .repay__item+.repay__item {
     margin-left: 0;
     margin-top: 20px;
   }
@@ -5048,7 +5063,7 @@ html .ui-button.ui-state-disabled:hover {
     margin-bottom: 35px;
   }
 
-  .mCSB_inside > .mCSB_container {
+  .mCSB_inside>.mCSB_container {
     padding-left: 0;
   }
 
@@ -5422,7 +5437,7 @@ html .ui-button.ui-state-disabled:hover {
     align-items: center;
   }
 
-  .how__item + .how__item {
+  .how__item+.how__item {
     margin-left: 0;
     margin-top: 20px;
   }
@@ -5674,7 +5689,7 @@ html .ui-button.ui-state-disabled:hover {
     margin-left: 15px;
   }
 
-  .footer__left-title + .footer__left-title {
+  .footer__left-title+.footer__left-title {
     margin-left: 0;
     margin-top: 50px;
   }
@@ -5814,7 +5829,7 @@ html .ui-button.ui-state-disabled:hover {
     padding: 40px 0px;
   }
 
-  .how__item + .how__item {
+  .how__item+.how__item {
     margin-top: 12px;
   }
 
